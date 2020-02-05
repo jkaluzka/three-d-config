@@ -1,1 +1,9 @@
+<div class="buttonsContainer">
+  <div *ngFor="let part of (config | async)?.parts"
+       class="shape"
+       (click)="renderShape(part)">
+    {{part.geometry}}
+  </div>
+  <div class="shape clear" (click)="renderShape({})">clear</div>
+</div>
 <div #scene class="sceneContainer">scene for model: {{modelId}}</div>
