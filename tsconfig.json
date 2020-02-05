@@ -11,6 +11,10 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": [
+      "node",
+      "webgl2"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],

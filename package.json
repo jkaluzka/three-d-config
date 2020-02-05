@@ -1,11 +1,12 @@
 {
   "name": "three-d-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:coverage": "ng test --no-watch --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -19,7 +20,10 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@types/three": "^0.103.2",
+    "@types/webgl2": "0.0.5",
     "rxjs": "~6.4.0",
+    "three": "^0.110.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
