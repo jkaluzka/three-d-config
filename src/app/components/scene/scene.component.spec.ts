@@ -1,3 +1,4 @@
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
@@ -9,7 +10,12 @@ describe('SceneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SceneComponent],
+      imports: [
+        HttpClientTestingModule,
+      ],
+      declarations: [
+        SceneComponent,
+      ],
       schemas: [NO_ERRORS_SCHEMA],
     })
       .compileComponents();

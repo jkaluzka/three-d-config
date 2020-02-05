@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import * as THREE from 'three';
+import {ModelsService} from '../../services/models.service';
 
 @Component({
   selector: 'app-scene',
@@ -14,12 +15,18 @@ export class SceneComponent implements OnInit, AfterViewInit {
   scene = null;
   camera = null;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private modelsService: ModelsService) {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 1, 10000);
     this.camera.position.z = 1000;
+  }
+
+  ngOnInit() {
+    this.modelsService.getModelConfig(this.modelId)
+      .subscribe(config => {
+        console.log('read config', config);
+      });
+
   }
 
   ngAfterViewInit(): void {
