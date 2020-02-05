@@ -1,0 +1,18 @@
+{
+  "name": "local-server",
+  "version": "0.1.0",
+  "description": "For serving configuration files purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start-server.js",
+    "test": "test"
+  },
+  "author": "jkaluzka@riseup.net",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "fs": "0.0.1-security",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.6"
+  }
+}
